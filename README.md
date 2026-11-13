@@ -8,10 +8,10 @@
 
 ## Overview
 
-**Kavya Vedika** is a bespoke classical Indian spiritual literature and poetry web sanctuary inspired by the interaction design and visual aesthetic of [cheaperinference.com](https://www.cheaperinference.com).
+**Kavya Vedika** is a bespoke classical Indian spiritual literature and poetry web sanctuary crafted with immersive interaction design and sacred aesthetics.
 
 It features:
-1. **Pinned Scroll Hero Engine (Reverse-Engineered from cheaperinference.com)**:
+1. **Pinned Scroll Storytelling Hero Engine**:
    - Sticky viewport stage pinned at `top: 0` inside an elongated scroll track.
    - Dynamic CSS variable `--hero-progress` continuously computed from `0.0000` to `1.0000` via `requestAnimationFrame`, `IntersectionObserver`, and `ResizeObserver`.
    - Multi-stage mathematical cross-fade typography curves:
@@ -54,7 +54,7 @@ It features:
 
 ## Technology Stack
 
-- **Framework**: React 18 + TypeScript + Vite
+- **Framework**: React 19 + TypeScript + Vite
 - **Styling**: Tailwind CSS + Custom CSS Modules
 - **Audio Engine**: Native Web Audio API procedural synthesizer
 - **Icons**: Lucide React

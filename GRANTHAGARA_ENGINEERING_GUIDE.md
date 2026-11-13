@@ -1,13 +1,13 @@
 # Granthāgāra 3D Sacred Sanctum: Master Engineering & Architectural Blueprint
 > **A 100% Comprehensive, Production-Grade Reference Document for Building High-End Spatial 3D Web Experiences**  
-> *Synthesizing the scroll storytelling paradigm of `cheaperinference.com`, the 3D craftsmanship of `library.jjangik.kr`, and the spiritual authenticity of the Vedic canon.*
+> *Synthesizing immersive scroll storytelling paradigms, the 3D craftsmanship of `library.jjangik.kr`, and the spiritual authenticity of the Vedic canon.*
 
 ---
 
 ## Table of Contents
 1. [Executive Summary & Core Architectural Paradigm](#1-executive-summary--core-architectural-paradigm)
 2. [Origins, Lineage & Reverse Engineering](#2-origins-lineage--reverse-engineering)
-   - [2.1 Lineage 1: Scroll Storytelling from `cheaperinference.com`](#21-lineage-1-scroll-storytelling-from-cheaperinferencecom)
+   - [2.1 Lineage 1: Scroll Storytelling Architecture](#21-lineage-1-scroll-storytelling-architecture)
    - [2.2 Lineage 2: Spatial Craftsmanship from `library.jjangik.kr`](#22-lineage-2-spatial-craftsmanship-from-libraryjjangikkr)
    - [2.3 The 10 Hidden Architectural Secrets of Production 3D Libraries](#23-the-10-hidden-architectural-secrets-of-production-3d-libraries)
 3. [Audio Engineering & Sacred Acoustic Synthesis](#3-audio-engineering--sacred-acoustic-synthesis)
@@ -114,8 +114,8 @@ Many 3D web experiments fail when developers attempt to render long-form body te
 
 The architecture of Granthāgāra was forged through the study and synthesis of two benchmark web projects:
 
-### 2.1 Lineage 1: Scroll Storytelling from `cheaperinference.com`
-`cheaperinference.com` pioneered a scroll narrative technique where the visual background and hero stage remain pinned in place (`position: sticky`), while the textual narrative seamlessly transforms as the user scrolls.
+### 2.1 Lineage 1: Scroll Storytelling Architecture
+The application employs an advanced scroll narrative technique where the visual background and hero stage remain pinned in place (`position: sticky`), while the textual narrative seamlessly transforms as the user scrolls.
 
 Granthāgāra adapts this pattern in `HeroScrollStage.tsx` and `HeroScrollStage.module.css`:
 1. **Pinned Hero Stage:**
@@ -1130,7 +1130,7 @@ When building 3D libraries, architectural galleries, or spatial rooms in React/T
 | `src/components/bookshelf/BookshelfModal.tsx` | Full-screen React HUD container: shelf navigation tier controls (Vedas, Upanishads, Poets, Window, All), 3D screen tooltip positioning, help modal, audio mute toggle, and Index Lens drawer state. |
 | `src/components/bookshelf/InteractiveBookReader.tsx` | Two-page non-scrollable folio reader: 3D CSS leaf-turning animations, perspective page stack shadows, crimson bookmark ribbon, Gaussian line lens, word-by-word Anvaya analysis, illumined translation, and Sabha forum dispatch. |
 | `src/components/bookshelf/IndexLensDrawer.tsx` | Quick-inspection directory drawer: Gaussian magnification ($K = 1.6$) allowing users to scan canon titles smoothly and jump directly to codices. |
-| `src/components/HeroScrollStage.tsx` | Sticky scroll storytelling controller (`cheaperinference.com` pattern): touch interpolation, scroll progress calculation, and narrative headline transformation. |
+| `src/components/HeroScrollStage.tsx` | Sticky scroll storytelling controller: touch interpolation, scroll progress calculation, and narrative headline transformation. |
 | `src/components/HeroScrollStage.module.css` | CSS isolation stage, sticky pinning, and typography transformation equations (`--hero-progress`). |
 | `src/components/HeroArtwork.tsx` | Sacred artwork backdrop: Maa Saraswati Devi masterpiece canvas and procedural SVG Vedic Dawn landscape. |
 | `src/utils/omChantAudio.ts` | Web Audio API procedural sacred Om (A-U-M / ॐ) engine: 136.1 Hz fundamental, 3-monk stereo ensemble, dynamic 3-stage vocal formant filters (F1, F2, F3), Tibetan singing bowl chimes, and procedural cave convolution reverb. |

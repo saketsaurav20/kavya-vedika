@@ -62,7 +62,7 @@ function AppContent() {
 
       {/* Main Content */}
       <main>
-        {/* CheaperInference-style Scroll-Engine Hero with Pinned Artwork & Changing Typography */}
+        {/* Interactive Scroll-Engine Hero with Pinned Artwork & Changing Typography */}
         <HeroScrollStage
           onExploreCanon={handleExploreCanon}
           onEnterSabha={handleEnterSabha}
