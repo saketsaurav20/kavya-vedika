@@ -1,0 +1,186 @@
+.hero {
+  --hero-progress: 0;
+  --hero-title-size: clamp(36px, 5vw, 72px);
+  --hero-title-leading: 1.15;
+  --hero-title-tracking: 0.025em;
+  position: relative;
+  min-height: calc(max(100svh, 720px) + min(65svh, 600px));
+  color: #fbf8ee;
+  background: #0b0a08;
+  scroll-margin-top: 0;
+}
+
+:global(html[lang="hi"]) .hero,
+:global(.lang-hi) .hero {
+  --hero-title-leading: 1.38;
+  --hero-title-tracking: 0.005em;
+}
+
+.stage {
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100svh;
+  min-height: 700px;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.artwork {
+  position: absolute;
+  z-index: -3;
+  inset: 0;
+}
+
+.shade {
+  position: absolute;
+  z-index: -2;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(180deg, rgba(11, 10, 8, 0.45) 0%, rgba(11, 10, 8, 0.18) 24%, rgba(11, 10, 8, 0.42) 60%, rgba(11, 10, 8, 0.98) 100%),
+    radial-gradient(ellipse 60% 36% at 50% 46%, rgba(11, 10, 8, 0.65), transparent 100%);
+}
+
+.intro {
+  container-type: inline-size;
+  position: relative;
+  flex: 1;
+  padding: 100px var(--ci-gutter, clamp(24px, 5vw, 80px)) 16px;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  will-change: transform, opacity;
+  transform: translateY(calc(var(--hero-progress) * -75px)) scale(calc(1 - var(--hero-progress) * 0.08));
+  opacity: clamp(0, calc(1 - var(--hero-progress) * 2.3), 1);
+}
+
+.arrival {
+  position: absolute;
+  inset: 18% 24px 24%;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  pointer-events: none;
+  will-change: transform, opacity;
+  transform: translateY(calc(55px - var(--hero-progress) * 55px));
+  opacity: clamp(0, calc((var(--hero-progress) - 0.36) * 2.2), 1);
+}
+
+.intro h1,
+.arrival h1 {
+  font-family: var(--ci-font-display, "Cinzel", serif);
+  font-weight: 700;
+  max-inline-size: 100%;
+  margin: 0;
+  text-shadow: 0 4px 45px rgba(0, 0, 0, 0.95);
+}
+
+:global(html[lang="hi"]) .intro h1,
+:global(html[lang="hi"]) .arrival h1,
+:global(.lang-hi) .intro h1,
+:global(.lang-hi) .arrival h1 {
+  font-family: var(--ci-font-display, "Rozha One", serif);
+  padding: 4px 0;
+}
+
+.intro h1 > span,
+.arrival h1 > span {
+  display: block;
+  font-size: var(--hero-title-size);
+  line-height: var(--hero-title-leading);
+  letter-spacing: var(--hero-title-tracking);
+  color: #fbf8ee;
+  max-inline-size: 100%;
+}
+
+.intro h1 em,
+.arrival h1 em {
+  display: block;
+  font-style: normal;
+  font-size: var(--hero-title-size);
+  line-height: var(--hero-title-leading);
+  letter-spacing: var(--hero-title-tracking);
+  color: #e6c387;
+  margin-top: 14px;
+  background: linear-gradient(135deg, #fff6de 0%, #ecd39e 45%, #d9a552 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 40px rgba(230, 195, 135, 0.35);
+}
+
+.sanskritVow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 22px;
+  margin-bottom: 24px;
+  border-radius: 9999px;
+  background: rgba(26, 22, 17, 0.85);
+  border: 1px solid rgba(230, 195, 135, 0.3);
+  backdrop-filter: blur(10px);
+  color: #f5dfb0;
+  font-family: var(--ci-font-devanagari, serif);
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.55);
+}
+
+.support {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 36px;
+  width: min(calc(100% - clamp(24px, 5vw, 80px) * 2), 1280px);
+  margin: 0 auto;
+  padding: 24px 0 42px;
+}
+
+.description {
+  max-width: 500px;
+  margin: 0;
+  color: #ede6d7;
+  font-size: 15.5px;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 0.01em;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.85);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: calc(max(100svh, 640px) + 50svh);
+  }
+  .stage {
+    min-height: 640px;
+  }
+  .support {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    padding-bottom: 24px;
+  }
+  .description {
+    max-width: 100%;
+    font-size: 14.5px;
+  }
+}
